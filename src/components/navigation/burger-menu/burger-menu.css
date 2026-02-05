@@ -1,5 +1,5 @@
 .burger-menu {
-  position: relative;
+  position: sticky;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -118,4 +118,13 @@ z-index: 1;
   transition: color 0.3s;
   padding: 2rem;
   font-family: Urbanist;
+}
+
+.fio-mobile{
+   color: rgb(15 23 42);
+  font-weight: 800;
+  font-family: "Urbanist";
+  font-size: 3.5rem;
+  line-height: 1.75rem;
+  margin-right: auto;
 }

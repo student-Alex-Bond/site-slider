@@ -5,17 +5,15 @@ export const MovingCapsule: FC = () => {
   const capsuleRef = useRef(null);
 
   useEffect(() => {
-   
-    const animation = gsap.to(capsuleRef.current.position, {
-      x: -1, 
-      duration: 10, 
-      ease: "sine.inOut",
-      repeat: -1,
-      yoyo: true, 
-      repeatDelay: 0.3,
-    });
-
-    // Очистка при размонтировании
+   if (!capsuleRef.current) return
+      const animation = gsap.to(capsuleRef.current.position, {
+        x: -1, 
+        duration: 10, 
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true, 
+        repeatDelay: 0.3,
+    });    
     return () => {
       animation.kill();
     };

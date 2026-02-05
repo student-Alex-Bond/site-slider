@@ -10,7 +10,7 @@ export const BurgerMenu: FC = () => {
 
   return (
     <nav className="burger-menu">
-      <span className="fio">Александр Бондаренко</span>
+      <span className="fio-mobile">Александр Бондаренко</span>
       <button
          className={`hamburger-button ${isOpen ? 'active' : ''}`}
         aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
