@@ -1,0 +1,33 @@
+.text-line {
+  max-height: 9.6rem;
+  min-width: 150%;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  transform: translateX(-30rem);
+}
+.text-line__word {
+  font-size: 9.6rem;
+  font-family: "Urbanist", sans-serif;
+  opacity: 0.5;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.orange {
+  color: #e67e22;
+  opacity: 1;
+}
+.blue {
+  color: #3498db;
+  opacity: 1;
+}
+.white {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+.green {
+  color: #2ecc71;
+  opacity: 1;
+}

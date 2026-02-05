@@ -1,0 +1,11 @@
+.h2-title {
+  grid-column: span 2;
+  font-size: 12.8rem;
+  font-family: "Urbanist";
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+  text-wrap: nowrap;
+  margin-bottom: 2rem;
+  color: rgb(229, 231, 235);
+}

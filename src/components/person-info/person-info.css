@@ -1,0 +1,39 @@
+.name {
+  font-family: Urbanist;
+  color: rgb(229, 231, 235);
+  font-size: 8rem;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+}
+.family {
+  color: rgb(100, 116, 139);
+  font-size: 8rem;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+  line-height: 3.5rem;
+}
+.profession {
+  padding-left: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 3.2;
+  font-size: 4rem;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right top,
+    rgb(234, 179, 8),
+    rgb(254, 240, 138),
+    rgb(234, 179, 8)
+  );
+  color: rgba(0, 0, 0, 0);
+  margin: 0;
+  z-index: 555;
+}
+.person_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

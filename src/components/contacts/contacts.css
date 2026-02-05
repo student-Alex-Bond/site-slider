@@ -1,0 +1,38 @@
+.contacts {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: min-content min-content;
+  padding: 0 3rem;
+}
+.contacts_btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+}
+.contacts_link {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  font-size: 2.8rem;
+  font-family: "Urbanist";
+  color: rgb(30, 41, 59);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.contacts_links {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.portfolio-svg {
+  position: absolute;
+  z-index: 10;
+  /* Центрируем SVG */
+  left: 20%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}

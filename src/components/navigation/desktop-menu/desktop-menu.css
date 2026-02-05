@@ -1,0 +1,112 @@
+.menu {
+  position: relative;
+  font-family: "Urbanist";
+  background-color: rgb(248, 250, 252);
+  width: 90%;
+  border-radius: 0.75rem;
+  margin: 1.6rem 1.6rem 0rem 1.6rem;
+  padding-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.2rem 2.6rem;
+  position: sticky;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+.menu-button {
+  position: relative;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: rgb(15, 23, 42);
+  padding: 1.5rem 3rem 1.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  background-image: linear-gradient(to top, #ff9900);
+  transition: background-size 0.5s ease;
+  background-repeat: no-repeat;
+  background-size: 100% 10%;
+  background-position: bottom;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+.arrowDegree45 {
+  position: absolute;
+  top: 1.4rem;
+  right: 0.8rem;
+}
+.nav-item {
+  font-family: "Urbanist";
+  display: block;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.5rem;
+  color: rgb(15, 23, 42);
+  cursor: pointer;
+  font-weight: 700;
+  background-image: linear-gradient(to top, #ff9900);
+  transition: background-size 0.5s ease;
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  background-position: bottom;
+  padding: 0.8rem;
+  display: block;
+  border-radius: 0.2rem;
+}
+.nav-item__active {
+  background-size: 100% 10%;
+}
+.nav-item:last-child {
+  background-size: 100% 0%;
+}
+
+.nav-item:hover {
+  background-size: 100% 100%;
+  opacity: 0.7;
+}
+.nav-item:last-child:hover {
+  background-size: 100% 0%;
+  opacity: 1;
+}
+
+.divider {
+  font-size: 2.25rem;
+  color: rgb(148 163 184);
+}
+
+.fio {
+  color: rgb(15 23 42);
+  font-weight: 800;
+  font-family: "Urbanist";
+  font-size: 2.5rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: auto;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  width: 30vw;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+.nav-list > li:not(.fio) {
+  margin-left: 10px; /* отступ между правыми элементами */
+}
+

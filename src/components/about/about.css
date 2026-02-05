@@ -1,0 +1,19 @@
+.about {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  color: rgb(229, 231, 235);
+  overflow: hidden;
+}
+
+.about__description {
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+  font-size: 2rem;
+  text-align: left;
+  padding-left: 3rem;
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

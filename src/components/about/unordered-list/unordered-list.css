@@ -1,0 +1,33 @@
+.skills {
+  list-style: none;
+  font-size: 2rem;
+  font-family: "Urbanist";
+  padding-left: 0.9rem;
+}
+
+.skills-item {
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.skills-item::before {
+  content: "•"; /* Символ точки */
+  position: absolute;
+  left: -2rem; /* Позиция точки относительно пункта */
+  top: 50%;
+  transform: translateY(-50%); /* Центрируем по вертикали */
+  color: rgb(229, 231, 235); /* Цвет точки */
+  font-size: 6rem; /* Размер точки */
+  width: 1.6rem; /* Ширина точки (для выравнивания) */
+  text-align: center;
+}
+
+.skills-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: -1.3rem;
+  top: 1.5rem;
+  bottom: -2rem;
+  width: 0.1rem;
+  background-color: rgb(229, 231, 235);
+}

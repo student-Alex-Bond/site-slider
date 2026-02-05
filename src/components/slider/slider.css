@@ -1,0 +1,72 @@
+.all-pages {
+  position: relative;
+  min-width: 100%;
+  overflow: hidden;
+}
+.pages-wrapper {
+  display: flex;
+  min-width: 100%;
+  transition: all 1s ease-out;
+  padding-top: 10rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: sticky;
+  height: 9rem;
+  bottom: 0;
+}
+.btn_controls {
+  width: 11rem;
+  height: 6rem;
+}
+
+.btn_controls,
+.btn_controls:active,
+.btn_controls:focus {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+@keyframes bounceNext {
+  from {
+    left: 2rem;
+  }
+  to {
+    left: 3rem;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+  }
+}
+.next {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    animation: bounceNext 0.3s ease infinite alternate;
+  }
+}
+@keyframes bounceBack {
+  from {
+    right: 2rem;
+  }
+  to {
+    right: 3rem;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+  }
+}
+.back {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    animation: bounceBack 0.3s ease infinite alternate;
+  }
+}

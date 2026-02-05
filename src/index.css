@@ -1,0 +1,51 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Urbanist";
+  font-style: normal;
+  src: url("./assets/fonts/Urabanist.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-weight: 400;
+  font-family: "Urbanist-Bold";
+  font-style: normal;
+  src: url("./assets/fonts/Urbanist_Bold.woff2") format("woff2");
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Urbanist";
+}
+@media only screen and (max-width: 1240px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+body {
+  background-image: url("./assets/images/noisetexture.jpg");
+  background-color: rgb(15, 23, 42, 0.99);
+  background-blend-mode: overlay;
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center;
+}
