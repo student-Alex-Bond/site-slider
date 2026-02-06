@@ -12,8 +12,22 @@
   text-align: left;
   padding-left: 3rem;
 }
+
 .about__container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media only screen and (max-width: 475px) {
+  .about__description {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__photo {
+    order: 1;
+  }
+  .about__container {
+    order: 2;
+  }
 }

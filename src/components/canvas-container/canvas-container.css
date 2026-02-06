@@ -9,5 +9,7 @@
   .figures-container {
     margin: 0;
     z-index: -1;
+    width: 70rem;
+    height: 70rem;
   }
 }

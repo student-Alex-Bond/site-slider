@@ -8,6 +8,7 @@ import { UnorderedList } from "./unordered-list/unordered-list";
 import { H3 } from "../shared/h3/h3";
 import { Paragraph } from "../shared/paragraph/paragraph";
 import { ResumeButton } from "../shared/resume-button/resume-button";
+import { useMediaQuery } from "react-responsive";
 
 const skillsList = [
   "HTML/CSS — верстаю блоки, разбираюсь в селекторах и позиционировании;",
@@ -16,6 +17,7 @@ const skillsList = [
 ];
 
 export const About: FC = () => {
+  const isMobile = useMediaQuery({ maxWidth: "475px" });
   return (
     <section className="page about">
       <section className="about__description">
@@ -32,13 +34,13 @@ export const About: FC = () => {
             участвовать в интересных проектах. Всегда рад обсудить лучшие
             практики и новые технологии!
           </Paragraph>
-          <ResumeButton/>
-          <H2>Что использую</H2>
+          <ResumeButton />
+          {isMobile ? <H2>Навыки</H2> : <H2>Что использую</H2>}
         </section>
-        <img src="" alt="photo" />
+        <img className="about__photo" src="" alt="photo" />
       </section>
       <TextLine />
-      <Footer />
+      {!isMobile && <Footer />}
     </section>
   );
 };
