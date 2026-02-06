@@ -29,7 +29,7 @@
   height: 0.4rem;
   background-color: black;
   border-radius: 0.2rem;
-  transition: 
+  transition:
     transform 0.3s ease,
     opacity 0.3s ease,
     top 0.3s ease,
@@ -80,14 +80,14 @@
   pointer-events: auto;
 }
 
-.menu-item{
-position: relative;
-z-index: 1;
+.menu-item {
+  position: relative;
+  z-index: 1;
 }
-.menu-item.active-tab::before{
-  content: '';
+.menu-item.active-tab::before {
+  content: "";
   position: absolute;
-  bottom:0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 2.5rem;
@@ -110,7 +110,11 @@ z-index: 1;
   margin-bottom: 3rem;
 }
 
-.menu-items a {
+.menu-items button {
+  border: none;
+  background-color: transparent;
+}
+.menu-items button a {
   color: rgb(15, 23, 42);
   text-decoration: none;
   font-size: 6rem;
@@ -120,11 +124,13 @@ z-index: 1;
   font-family: Urbanist;
 }
 
-.fio-mobile{
-   color: rgb(15 23 42);
+.fio-mobile {
+  color: rgb(15 23 42);
   font-weight: 800;
   font-family: "Urbanist";
   font-size: 3.5rem;
   line-height: 1.75rem;
   margin-right: auto;
+  border: none;
+  background-color: transparent;
 }
