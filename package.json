@@ -1,6 +1,6 @@
 {
-  "name": "site-slider",
   "homepage": "https://student-alex-bond.github.io/site-slider/",
+  "name": "site-slider",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -8,9 +8,9 @@
 
 @media only screen and (max-width: 475px) {
   .contacts {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, min-content);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .contacts_btn {
