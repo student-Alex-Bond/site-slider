@@ -2,12 +2,14 @@ import { useState, useRef, useEffect, type MouseEventHandler } from "react";
 import "./hover-image-follow.css";
 import myImage from "../../../assets/images/lib-film.jpg";
 import { PiArrowSquareUpRight } from "react-icons/pi";
+import { useMediaQuery } from "react-responsive";
 export const HoverImageFollow = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [targetPos, setTargetPos] = useState({ x: 0, y: 0 });
   const imgRef = useRef<HTMLImageElement | null>(null);
-
+  const isMobile = useMediaQuery({ maxWidth: "475px" });
   useEffect(() => {
+    if (isMobile) return;
     if (!isHovered || !imgRef.current) return;
     let animationId: number;
 
@@ -36,7 +38,7 @@ export const HoverImageFollow = () => {
         if (animationId) cancelAnimationFrame(animationId);
       };
     }
-    animate()
+    animate();
   }, [isHovered, targetPos]);
 
   const handleMouseEnter: MouseEventHandler<HTMLDivElement> = (e) => {

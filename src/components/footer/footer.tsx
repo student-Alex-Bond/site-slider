@@ -16,15 +16,21 @@ export const Footer: FC = () => {
         {!isMobile && <p className="footer-divider">/</p>}
         <p className="copyright">© 2025 Александр Бондаренко</p>
       </div>
-      <div className="footer-center">
-        <a onClick={() => gotoSlide(ABOUT)} href="#" className="footer-link">
-          Обо мне
-        </a>
-        <span>/</span>
-        <a onClick={() => gotoSlide(PROJECTS)} href="#" className="footer-link">
-          Проекты
-        </a>
-      </div>
+      {!isMobile && (
+        <div className="footer-center">
+          <a onClick={() => gotoSlide(ABOUT)} href="#" className="footer-link">
+            Обо мне
+          </a>
+          <span>/</span>
+          <a
+            onClick={() => gotoSlide(PROJECTS)}
+            href="#"
+            className="footer-link"
+          >
+            Проекты
+          </a>
+        </div>
+      )}
       <div className="footer-right">
         <a
           href="https://github.com/student-Alex-Bond"
