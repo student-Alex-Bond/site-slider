@@ -31,6 +31,16 @@
   margin: 0;
   z-index: 555;
 }
+
+@media screen and (max-width: 475px) {
+  .name,
+  .family {
+    font-size: 11rem;
+  }
+  .profession {
+    font-size: 5rem;
+  }
+}
 .person_container {
   display: flex;
   justify-content: center;

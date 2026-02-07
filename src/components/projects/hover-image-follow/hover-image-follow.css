@@ -14,6 +14,11 @@
   padding-right: 4.5rem;
   font-family: "Urbanist";
 }
+@media only screen and (max-width: 475px) {
+  .hover-area {
+    padding-bottom: 3rem;
+  }
+}
 
 .follow-image {
   position: absolute;

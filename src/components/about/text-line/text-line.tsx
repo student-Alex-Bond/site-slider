@@ -4,10 +4,10 @@ import { ScrollTrigger } from "gsap/all";
 import "./text-line.css";
 
 export const TextLine: FC = () => {
-  const textLinesRef = useRef(null);
+  const textLinesRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    const textLines = gsap.utils.toArray(".text-line");
+    const textLines = gsap.utils.toArray(".text-line") as HTMLElement[];
     gsap.registerPlugin(ScrollTrigger);
     textLines.forEach((line) => {
       gsap.to(line, {
@@ -18,7 +18,7 @@ export const TextLine: FC = () => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: line,
-          start: "top 100%",
+          start: "top 150%",
           end: "bottom 0%",
           scrub: 0.5,
           markers: false,

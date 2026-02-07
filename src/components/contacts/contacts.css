@@ -1,8 +1,17 @@
 .contacts {
+  position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: min-content min-content;
   padding: 0 3rem;
+}
+
+@media only screen and (max-width: 475px) {
+  .contacts {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+  }
 }
 .contacts_btn {
   display: flex;

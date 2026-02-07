@@ -3,23 +3,25 @@ import { useContext, type FC } from "react";
 import { FaGithub, FaTelegram } from "react-icons/fa";
 import "./Footer.css";
 import { SlideNumberContext } from "../../context/slide-number-context";
+import { useMediaQuery } from "react-responsive";
 export const Footer: FC = () => {
   const { gotoSlide } = useContext(SlideNumberContext);
-  const about = 1;
-  const projects = 2;
+  const isMobile = useMediaQuery({ maxWidth: "475px" });
+  const ABOUT = 1;
+  const PROJECTS = 2;
   return (
     <footer className="footer">
       <div className="footer-left">
         <p className="footer-logo">Александр Бондаренко</p>
-        <p className="footer-divider">/</p>
+        {!isMobile && <p className="footer-divider">/</p>}
         <p className="copyright">© 2025 Александр Бондаренко</p>
       </div>
       <div className="footer-center">
-        <a onClick={() => gotoSlide(about)} href="#" className="footer-link">
+        <a onClick={() => gotoSlide(ABOUT)} href="#" className="footer-link">
           Обо мне
         </a>
         <span>/</span>
-        <a onClick={() => gotoSlide(projects)} href="#" className="footer-link">
+        <a onClick={() => gotoSlide(PROJECTS)} href="#" className="footer-link">
           Проекты
         </a>
       </div>

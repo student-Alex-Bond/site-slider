@@ -23,6 +23,8 @@
   .about__description {
     display: flex;
     flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 3rem;
   }
   .about__photo {
     order: 1;
