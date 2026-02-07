@@ -17,6 +17,8 @@
 @media only screen and (max-width: 475px) {
   .hover-area {
     padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -47,6 +49,7 @@
 }
 .hover-area_span {
   position: relative;
+  color: rgb(229, 231, 235);
 }
 .hover-area_span::before {
   content: "Ts  React";
