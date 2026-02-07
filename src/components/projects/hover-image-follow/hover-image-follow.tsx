@@ -6,36 +6,35 @@ export const HoverImageFollow = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [targetPos, setTargetPos] = useState({ x: 0, y: 0 });
   const imgRef = useRef<HTMLImageElement | null>(null);
+   const animationIdRef = useRef<number | undefined>(undefined);
+
   useEffect(() => {
     if (!isHovered || !imgRef.current) return;
-    let animationId: number;
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     function animate() {
       const img = imgRef.current;
-
       if (img) {
         const rect = img.getBoundingClientRect();
-
         const currentX = rect.left + rect.width / 2;
         const currentY = rect.top + rect.height / 2;
-
         const diffX = targetPos.x - currentX;
         const diffY = targetPos.y - currentY;
 
         if (Math.abs(diffX) > 0.1 || Math.abs(diffY) > 0.1) {
           img.style.left = `${img.offsetLeft + diffX * 0.6}px`;
           img.style.top = `${img.offsetTop + diffY * 0.6}px`;
-          animationId = requestAnimationFrame(animate);
+          animationIdRef.current = requestAnimationFrame(animate);
         }
       }
-
-      animationId = requestAnimationFrame(animate);
-
-      return () => {
-        if (animationId) cancelAnimationFrame(animationId);
-      };
     }
+
+    animate();
+
+    return () => {
+      if (animationIdRef.current !== undefined) {
+        cancelAnimationFrame(animationIdRef.current);
+      }
+    };
   }, [isHovered, targetPos]);
 
   const handleMouseEnter: MouseEventHandler<HTMLDivElement> = (e) => {
