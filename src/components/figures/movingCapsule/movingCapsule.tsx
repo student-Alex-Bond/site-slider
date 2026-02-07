@@ -1,8 +1,9 @@
 import { Capsule } from "@react-three/drei";
 import { useEffect, useRef, type FC } from "react";
 import gsap from 'gsap';
+import * as THREE from 'three';
 export const MovingCapsule: FC = () => {
-  const capsuleRef = useRef(null);
+  const capsuleRef = useRef<THREE.Mesh | null>(null);
 
   useEffect(() => {
    if (!capsuleRef.current) return

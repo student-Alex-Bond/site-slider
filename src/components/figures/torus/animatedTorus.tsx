@@ -1,10 +1,12 @@
 import { Torus } from "@react-three/drei";
 import { useEffect, useRef, type FC } from "react";
 import gsap from "gsap";
+import * as THREE from 'three';
 export const AnimatedTorus: FC = () => {
-  const torusRef = useRef(null);
+  const torusRef = useRef<THREE.Mesh | null>(null);
 
   useEffect(() => {
+    if(!torusRef.current) return
     const animation = gsap.to(torusRef.current.position, {
       y: -1,
       duration: 1,

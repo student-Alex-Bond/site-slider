@@ -1,9 +1,12 @@
 import { useEffect, useRef, type FC } from "react";
 import gsap from "gsap";
+import * as THREE from "three";
+
 export const RotatingIcosahedron: FC = () => {
-  const meshRef = useRef(null);
+  const meshRef = useRef<THREE.Mesh | null>(null);
 
   useEffect(() => {
+    if (!meshRef.current) return;
     const animation = gsap.to(meshRef.current.rotation, {
       x: Math.PI * 4,
       y: Math.PI * 6,

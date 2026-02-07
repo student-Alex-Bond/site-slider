@@ -16,7 +16,6 @@ export const HoverImageFollow = () => {
 
       if (img) {
         const rect = img.getBoundingClientRect();
-        console.log(rect.left, rect.right);
 
         const currentX = rect.left + rect.width / 2;
         const currentY = rect.top + rect.height / 2;
@@ -37,6 +36,7 @@ export const HoverImageFollow = () => {
         if (animationId) cancelAnimationFrame(animationId);
       };
     }
+    animate()
   }, [isHovered, targetPos]);
 
   const handleMouseEnter: MouseEventHandler<HTMLDivElement> = (e) => {
