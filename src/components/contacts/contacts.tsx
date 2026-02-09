@@ -1,9 +1,9 @@
 import { useEffect, useRef, type FC } from "react";
 import "./contacts.css";
-import { H2 } from "../shared/h2/h2";
-import { Footer } from "../footer/footer";
+import { H2 } from "../shared/h2";
+import { Footer } from "../footer";
 import { FaArrowRight } from "react-icons/fa";
-import PulseCircles from "../shared/pulse-circle/pulse-circle";
+import { PulseCircles } from "../shared/pulse-circle";
 import { gsap } from "gsap";
 
 export const Contacts: FC = () => {

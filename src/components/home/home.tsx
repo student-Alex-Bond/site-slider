@@ -1,9 +1,9 @@
 import { type FC } from "react";
 import "./Home.css";
 
-import { Footer } from "../footer/footer";
-import { PersonInfo } from "../person-info/person-info";
-import { CanvasContainer } from "../canvas-container/canvas-container";
+import { Footer } from "../footer";
+import { PersonInfo } from "../person-info";
+import { CanvasContainer } from "../canvas-container";
 
 export const Home: FC = () => {
   return (

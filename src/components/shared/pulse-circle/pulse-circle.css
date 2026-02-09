@@ -1,0 +1,17 @@
+.pulse__container {
+  position: relative;
+  width: 50rem;
+  height: 50rem;
+  background-color: transparent;
+  overflow: hidden;
+  justify-self: center;
+}
+.pulse__point {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #007bff;
+  border-radius: 50%;
+  left: calc(50% - 1rem);
+  top: calc(50% - 1rem);
+}

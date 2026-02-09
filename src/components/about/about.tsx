@@ -1,15 +1,14 @@
 import { type FC } from "react";
 import "./About.css";
-
-import { Footer } from "../footer/footer";
-import { TextLine } from "./text-line/text-line";
-import { H2 } from "../shared/h2/h2";
-import { UnorderedList } from "./unordered-list/unordered-list";
-import { H3 } from "../shared/h3/h3";
-import { Paragraph } from "../shared/paragraph/paragraph";
-import { ResumeButton } from "../shared/resume-button/resume-button";
+import { Footer } from "../footer";
+import { TextLine } from "./text-line";
+import { UnorderedList } from "./unordered-list";
+import { H3 } from "../shared/h3";
+import { Paragraph } from "../shared/paragraph";
+import { ResumeButton } from "../shared/resume-button";
 import { useMediaQuery } from "react-responsive";
-
+import me from "../../assets/images/me.jpg";
+import { H2 } from "../shared/h2";
 const skillsList = [
   "HTML/CSS — верстаю блоки, разбираюсь в селекторах и позиционировании;",
   "JavaScript — пишу простые приложения на React, подкрепленные Typescript;",
@@ -37,7 +36,9 @@ export const About: FC = () => {
           <ResumeButton />
           {isMobile ? <H2>Навыки</H2> : <H2>Что использую</H2>}
         </section>
-        <img className="about__photo" src="" alt="photo" />
+        <div className="about__photo_container">
+          <img className="about__photo" src={me} alt="photo" />
+        </div>
       </section>
       <TextLine />
       {!isMobile && <Footer />}

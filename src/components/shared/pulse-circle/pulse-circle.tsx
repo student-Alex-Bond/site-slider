@@ -1,7 +1,7 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, type FC } from "react";
 import { gsap } from "gsap";
-
-const PulseCircles = () => {
+import "./pulse-circle.css";
+export const PulseCircles: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const pointRef = useRef<HTMLDivElement>(null);
   const circlesRef = useRef<HTMLDivElement[]>([]);
@@ -28,7 +28,6 @@ const PulseCircles = () => {
       circlesRef.current.push(circle);
     }
 
-    // Анимация кругов
     const animateCircles = () => {
       circlesRef.current.forEach((circle, index) => {
         gsap.to(circle, {
@@ -57,32 +56,8 @@ const PulseCircles = () => {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      style={{
-        position: "relative",
-        width: "50rem",
-        height: "50rem",
-        backgroundColor: "transparent",
-        overflow: "hidden",
-        justifySelf: "center",
-      }}
-    >
-      {/* Центральная точка */}
-      <div
-        ref={pointRef}
-        style={{
-          position: "absolute",
-          width: "2rem",
-          height: "2rem",
-          backgroundColor: "#007BFF",
-          borderRadius: "50%",
-          left: "calc(50% - 1rem)",
-          top: "calc(50% - 1rem)",
-        }}
-      />
+    <div className="pulse__container" ref={containerRef}>
+      <div className="pulse__point" ref={pointRef} />
     </div>
   );
 };
-
-export default PulseCircles;

@@ -12,6 +12,7 @@
   cursor: default;
   padding-left: 1.5rem;
   padding-right: 4.5rem;
+  
   font-family: "Urbanist";
 }
 @media only screen and (max-width: 475px) {

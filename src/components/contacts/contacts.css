@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: min-content min-content;
+  grid-template-rows: min-content min-content min-content;
   padding: 0 3rem;
 }
 

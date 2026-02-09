@@ -1,18 +1,18 @@
 import { useContext, useRef, type FC } from "react";
 import { SlideNumberContext } from "../../context/slide-number-context";
-import { Home } from "../home/home";
-import { About } from "../about/about";
-import { Projects } from "../projects/projects";
-import { Contacts } from "../contacts/contacts";
+import { Home } from "../home";
+import { About } from "../about";
+import { Projects } from "../projects";
+import { Contacts } from "../contacts";
 import { gsap } from "gsap";
 import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from "react-icons/bs";
 import "./slider.css";
 
 export const Slider: FC = () => {
   const { slide, changeSlide } = useContext(SlideNumberContext);
-  const currentElRef = useRef(null);
-  const nextSlide = 1;
-  const prevSlide = -1;
+  const currentElRef = useRef<HTMLDivElement | null>(null);
+  const NEXTSLIDE = 1;
+  const PREVSLIDE = -1;
   const pages = [
     { page: <Home /> },
     { page: <About /> },
@@ -36,7 +36,7 @@ export const Slider: FC = () => {
         duration: 0.6,
         ease: "power2.out",
         onComplete: () => {
-          changeSlide(prevSlide);
+          changeSlide(PREVSLIDE);
         },
       })
       .to(currentEl, {
@@ -62,7 +62,7 @@ export const Slider: FC = () => {
         duration: 0.6,
         ease: "power2.out",
         onComplete: () => {
-          changeSlide(nextSlide);
+          changeSlide(NEXTSLIDE);
         },
       })
       .to(currentEl, {
